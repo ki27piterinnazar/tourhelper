@@ -1,2 +1,15 @@
-A sample command-line application with an entrypoint in `bin/`, library code
-in `lib/`, and example unit test in `test/`.
+# Tour Helper (Lab 5)
+
+Консольний застосунок на Dart для управління турами.
+
+## Архітектура проєкту
+Проєкт розділено на 4 незалежні шари:
+1. **Domain** (`lib/domain`) - містить сутності (`Tour`) та контракти репозиторіїв. Не залежить від жодних інших шарів.
+2. **Application** (`lib/application`) - містить бізнес-сценарії (Use Cases), такі як додавання та отримання турів.
+3. **Infrastructure** (`lib/infrastructure`) - реалізує контракти з шару Domain (збереження даних у пам'яті).
+4. **Presentation** (`bin`) - консольне меню та точка входу в програму (впровадження залежностей).
+
+## Запуск програми
+Переконайтеся, що ви знаходитесь у кореневій папці проєкту (`tourhelperproj`), і виконайте команду:
+```bash
+dart run
